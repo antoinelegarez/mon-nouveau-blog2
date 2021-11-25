@@ -1,0 +1,36 @@
+h1 a {
+    color: #f5f4f3;
+}
+
+body {
+    padding-left: 15px;
+    background-color: #d0cfd1;
+}
+.page-header {
+    background-color: #3a00c2;
+    margin-top: 0;
+    padding: 4px 4px 4px 8px;
+}
+section{
+    width: 250px;
+    height: 390px;
+    background-color: #fafafa;
+    padding: 0px 10px 0px 0px;
+}
+
+section p{
+    margin: auto;
+}
+.titre1{
+    padding-left: auto;
+    color: #0423d3;
+}
+.titre2{
+    padding-left: auto;
+    color: #0423d3;
+}
+#conteneur
+    {display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

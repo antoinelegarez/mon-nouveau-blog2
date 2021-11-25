@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<p> <img src= {{animal.photo}} alt="Image_animal" style="width:250px;height:250px;"> </p>
+<p>Etat actuel: {{ animal.etat}}</p>
+<p>Lieu actuel: {{ animal.lieu}}</p>
+<div class="page-header">
+    <h1>
+        <a href="/">{{ animal.id_animal }}</a>
+    </h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        <b> Changer : </b> {{ form.as_ul }}
+        <button type="submit" class="btn btn-outline-light">OK</button>
+        <a href="{% url 'post_list' %}">Back</a>
+        <p>  {% if message != ""%}
+            <div class="alert alert-danger" role="alert">
+                {{message}}
+            </div>
+        {% endif %} </p>
+    </form>
+</div>
+ 
+ 
+{% endblock %}

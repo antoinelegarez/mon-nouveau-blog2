@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}        
+        <CENTER><h2 class="titre1">Animaux</h2></CENTER> <br>
+        <div id="conteneur">   
+            {% for animal in animaux %}
+            <div class="element"><section>
+
+                <p> <img src= {{animal.photo}} alt="Image_animal" style="width:250px;height:250px;"> </p>
+                    <h2 class="nom_objet"><a href="">{{ animal}}</a></h2> 
+                <p>Etat actuel: {{ animal.etat}}</p>
+                <p>Lieu actuel: {{ animal.lieu}}</p>
+                <h4 class="modifier"><a href="{% url 'animal_detail' id_animal=animal.id_animal %}">Plus de détails</a></h4>
+            </section> <br>
+            </div>
+            {% endfor %}
+        </div> <br>
+        <CENTER><h2 class="titre2">Equipement</h2></CENTER> <br>
+        <div id="conteneur"> 
+            {% for equipement in equipements %}
+            <div class="element"><section>
+                <p> <img src= {{equipement.photo}} alt="Image_equipement" style="width:250px;height:250px;">
+                <p><h2 class="nom_objet"><a href="">{{ equipement}}</a></h2>  </p> 
+                <p>Disponibilité de l'équipement: {{ equipement.disponibilite}}</p>
+                <h4 class="modifier"><a href="">Plus de détails</a></h4>
+            </section> <br>
+            </div>
+
+            {% endfor %}
+            </div>
+{% endblock %}
